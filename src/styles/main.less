@@ -1,4 +1,5 @@
-@import 'variaveis.less';
+@import 'mapa.less';
+
 @breakpointMobile: ~"(max-width: 767px)";
 @breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
 
@@ -14,14 +15,22 @@
 }
 
 body{
-    background-color: @corDeFundo;
-    color: @corDosTextos;
+    background-color: #colors[background-color];
+    color: #colors[textColor];
+}
+
+li{
+    list-style: none;
 }
 
 .container {
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 
     @media @breakpointMobile {
@@ -34,7 +43,7 @@ body{
 }
 
 header {
-    padding: 24px;
+    padding-bottom: 24px;
 
     .profile-avatar{
         display: block;
@@ -46,17 +55,60 @@ header {
 .profile-bio {
     text-align: center;
     &-name{
-        font-size: 16px;
+        font-size: 20px;
         .marginBottom8(); //mixing
     }
 
     &-subtitle{
-        font-size: 14px;
+        font-size: 16px;
         .marginBottom8(); //mixing
     }
 
     &-description{
         font-size: 14px;
         opacity: 0.75;
+    }
+
+    p > strong{
+        font-size: 15px;
+    }
+}
+
+.social-links{
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+
+        img{
+            transition: all ease .3;
+            &:hover{
+                transform: scale(1.3);
+            }
+        }
+    }
+
+.project-list{
+    &-item{
+        a {
+            text-decoration: none;
+            background-color: #colors[buttomColor];
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            margin-top: 32px;
+            text-align: center;
+            color: #colors[textColor];
+            font-weight: bold;
+            border-radius: 30px;
+            border: 2px solid #colors[buttomColor];
+            transition: all ease .5;
+
+            &:hover{
+                color: #colors[buttomColor];
+                background-color: transparent;
+            }
+        }
     }
 }

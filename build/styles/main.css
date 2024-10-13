@@ -11,10 +11,17 @@ body {
   background-color: #192a56;
   color: #f5f6fa;
 }
+li {
+  list-style: none;
+}
 .container {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media (max-width: 767px) {
   .container {
@@ -27,7 +34,7 @@ body {
   }
 }
 header {
-  padding: 24px;
+  padding-bottom: 24px;
 }
 header .profile-avatar {
   display: block;
@@ -38,14 +45,48 @@ header .profile-avatar {
   text-align: center;
 }
 .profile-bio-name {
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 8px;
 }
 .profile-bio-subtitle {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 8px;
 }
 .profile-bio-description {
   font-size: 14px;
   opacity: 0.75;
+}
+.profile-bio p > strong {
+  font-size: 15px;
+}
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 240px;
+  width: 100%;
+  margin: 0 auto;
+}
+.social-links img {
+  transition: all ease 0.3;
+}
+.social-links img:hover {
+  transform: scale(1.3);
+}
+.project-list-item a {
+  text-decoration: none;
+  background-color: #0097e6;
+  display: block;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  margin-top: 32px;
+  text-align: center;
+  color: #f5f6fa;
+  font-weight: bold;
+  border-radius: 30px;
+  border: 2px solid #0097e6;
+  transition: all ease 0.5;
+}
+.project-list-item a:hover {
+  color: #0097e6;
+  background-color: transparent;
 }
