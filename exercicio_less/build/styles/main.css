@@ -1,0 +1,86 @@
+body {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+header {
+  text-align: center;
+}
+header h1 {
+  font-family: 'Prompt', sans-serif;
+  color: #3742fa;
+  margin: 20px;
+  padding: 0;
+}
+main .noticia .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+main .noticia .container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+main .noticia .container article {
+  text-align: center;
+}
+main .noticia .container article h2 {
+  color: #5352ed;
+  margin: 15px 0;
+}
+main .noticia .container article p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  main .noticia .btn {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  main .noticia .btn {
+    margin-top: 10px;
+  }
+}
+main .redes-sociais {
+  text-align: center;
+  margin-top: 40px;
+}
+main .redes-sociais h2 {
+  margin-bottom: 15px;
+  color: #3742fa;
+}
+main .redes-sociais .social-links {
+  list-style: none;
+  padding: 0;
+}
+main .redes-sociais .social-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+main .redes-sociais .social-links li a img {
+  width: 40px;
+  transition: transform 0.3s ease;
+}
+main .redes-sociais .social-links li a img:hover {
+  transform: scale(1.1);
+}
+.btn {
+  background-color: #5352ed;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #3742fa;
+  color: white;
+}
